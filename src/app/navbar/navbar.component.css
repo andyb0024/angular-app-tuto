@@ -1,0 +1,14 @@
+
+.mynav{
+    background-color: #2C8389;
+}
+
+.nav-item li a{
+    color: red;
+}
+mat-toolbar {
+  background-color: #2C8389;
+  margin-right: 100px;
+  color: #fff;
+  border-bottom: 1px ;
+}

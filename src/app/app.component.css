@@ -1,0 +1,38 @@
+.mat-sidenav-container{
+  background-color: #2C8389;
+  height: 100%;
+}
+mat-sidenav{
+
+width: 200px;
+margin: 0px;
+border-right: 1px;
+
+padding: 16px;
+text-align: center;
+
+}
+
+li a{
+  color: #2C8389;
+  font-weight:500;
+  font-size: larger;
+}
+
+
+
+
+
+mat-icon{
+  font-size: 40px ;
+
+}
+
+button {
+  font-size: 20px;
+  background-color: red !important;
+}
+
+mat-sidenav-container {
+  height:100%;
+}

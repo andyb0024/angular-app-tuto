@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row ">
+      <!-- <div class="col-md-4">
+          <ul class="list  list-group-light">
+         <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+          <li class="list-group-item my-3 disabled mylist" aria-disabled="true" >
+            <h2> {{hero.name}}</h2>
+          </li>
+         </a>
+          </ul>
+
+      </div> -->
+
+      <div class="col-sm-6 col-md-6 col-lg-4 my-3 "  *ngFor="let album of albums">
+        <div class="card mx-5" style="width: 18rem;">
+          <img [src]="album.get_image" class="card-img-top img-thumbnail" alt="Sunset Over the Sea"/>
+          <div class="card-body">
+            <h5 class="card-title">{{ album.title|uppercase}}</h5>
+            <p class="card-text">   {{ album.title|uppercase}}</p>
+            <a routerLink="/album/{{album.id}}" class="btn mybtn">View</a>
+          </div>
+        </div>
+        </div>
+
+
+  </div>
+  </div>
+

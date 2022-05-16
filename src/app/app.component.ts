@@ -1,10 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
+import {
+  BreakpointObserver,
 
+} from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
+import { ExpensesService } from './services/expenses.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-tour-of-heroes';
+
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
+
+  title = 'Tour of Heroes';
+  constructor(private observer:BreakpointObserver){}
+
+  ngAfterViewInit() {
+    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+      if (res.matches) {
+        this.sidenav.mode = 'over';
+        this.sidenav.close();
+      } else {
+        this.sidenav.mode = 'side';
+        this.sidenav.open();
+      }
+    });
+  }
+
+
+
+
 }

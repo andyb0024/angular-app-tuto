@@ -1,0 +1,24 @@
+.mylist{
+    background-color: #3f525c;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+  }
+
+
+  @media (min-width: 600px) {
+   li h2 a {
+      width: 18%;
+      box-sizing: content-box;
+    }
+  }
+
+  ul li a:hover {
+    background-color: #000;
+  }
+
+  .mybtn{
+    background-color: #2C8389 !important;
+  }
