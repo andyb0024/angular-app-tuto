@@ -40,12 +40,9 @@
   </nav> -->
   <mat-toolbar  class="sticky-top">
     <button mat-icon-button  *ngIf="sidenavData.mode === 'over'" (click)="sidenavData.toggle()">
-        <mat-icon *ngIf="!sidenavData.opened">
-            menu
-        </mat-icon>
-        <mat-icon *ngIf="sidenavData.opened">
-            close
-        </mat-icon>
+
+        <i style="color: #000; " class="fas fa-bars " *ngIf="!sidenavData.close"></i>
+         <i style="font-size: 30px;" class="fas fa-bars " *ngIf="sidenavData.close"></i>
 
     </button>
   INFINITUBE MUSIC

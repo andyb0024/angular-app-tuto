@@ -7,27 +7,42 @@
 
 <app-footer></app-footer>  -->
 
-<mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="content mat-elevation-z3">
+<mat-sidenav-container >
+  <mat-sidenav [ngClass]="collapsed? 'sidenav-collapsed':''" #sidenav="matSidenav" class="content mat-elevation-z3">
     <ul class="list-group list-group-flush">
 
-      <li class="nav-item list-group-item" >
-        <a class="nav-link active" aria-current="page" routerLink="/album">Albums</a>
-      </li>
-      <li class="nav-item list-group-item">
-        <a class="nav-link" routerLink="/membership">Subscriptions</a>
-      </li>
-      <li class="nav-item list-group-item" >
-        <a class="nav-link active" aria-current="page" routerLink="/album">Albums</a>
-      </li>
-      <li class="nav-item list-group-item">
-        <a class="nav-link" routerLink="/heroes">Subscriptions</a>
+      <li  class="nav-item list-group-item " >
+        <i class="fas fa-music" (click)="toggleCollapse()"></i>
+        <a  class="nav-link active " aria-current="page" routerLink="/album">
+    <span *ngIf="collapsed">Album</span>
+        </a>
       </li>
       <li class="nav-item list-group-item" >
-        <a class="nav-link active" aria-current="page" routerLink="/album">Albums</a>
+        <i class="fas fa-user "></i>
+        <a class="nav-link active" aria-current="page" routerLink="/album">
+         <span *ngIf="collapsed">Artist</span>
+        </a>
       </li>
       <li class="nav-item list-group-item">
-        <a class="nav-link" routerLink="/heroes">Subscriptions</a>
+        <i class="fas fa-rocket "(click)="toggleCollapse()"></i>
+        <a class="nav-link" routerLink="/membership">
+         <span *ngIf="collapsed">Membership</span>
+        </a>
+      </li>
+
+
+      <li class="nav-item list-group-item">
+        <i class="fas fa-cog " (click)="toggleCollapse()"></i>
+        <a class="nav-link" routerLink="/heroes">
+       <span *ngIf="collapsed">Settings</span>
+        </a>
+      </li>
+      <li class="nav-item list-group-item" >
+        <i class="fas fa-sign-out "></i>
+        <a class="nav-link active" aria-current="page" routerLink="/album">
+
+          <span *ngIf="collapsed">Log out</span>
+        </a>
       </li>
     </ul>
 
@@ -35,7 +50,7 @@
 
   </mat-sidenav >
 
-  <mat-sidenav-content>
+  <mat-sidenav-content [ngClass]="collapsed? 'content-collapsed':''" >
       <div class="content mat-elevation-z3">
         <router-outlet>
           <app-navbar   [sidenavData]="sidenav" ></app-navbar>

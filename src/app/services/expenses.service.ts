@@ -34,5 +34,15 @@ export class ExpensesService {
 
   }
 
+  getMembership(){
+    const url=this.baseUrl + 'membership';
+    return this.httpClient.get(url);
+  }
+
+
+  getMusic(id:number,slug:string){
+    const url=this.baseUrl +'album/'+`${id}/`+`${slug}`;
+    return this.httpClient.get(url);
+  }
 
 }

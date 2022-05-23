@@ -14,6 +14,7 @@ export class AppComponent {
 
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
+  collapsed=false;
 
   title = 'Tour of Heroes';
   constructor(private observer:BreakpointObserver){}
@@ -28,6 +29,11 @@ export class AppComponent {
         this.sidenav.open();
       }
     });
+  }
+
+  toggleCollapse():void{
+    this.collapsed = !this.collapsed;
+
   }
 
 

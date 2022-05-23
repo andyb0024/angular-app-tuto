@@ -1,24 +1,25 @@
 
 <div class="container mycontainer">
 
+  <h1>{{albums.title}}</h1>
 
-
-  <div class="row">
+  <div class="row" *ngIf="albums">
     <div class="col-md-6 col-lg-6 col-sm-4 img">
       <div class="card">
         <div class="card-body">
-          <h1 class="card-title">  {{albums.title}}</h1>
+
           <img [src]="albums.get_image" class="card-img-top img-thumbnail" alt="Sunset Over the Sea"/>
         </div>
       </div>
 
     </div>
     <div class="col-md-6 col-lg-6 col-sm-4 content">
-      <div class="card">
-        <div class="card-body">
-          <h1 class="card-title">  {{albums.title}}</h1>
-        </div>
-      </div>
+
+          <h1 class="card-title" > </h1>
+          <ul class="list-group">
+            <li class="list-group-item " [routerLink]="['/album',albums.id,music.slug]" *ngFor="let music of albums.musics" aria-disabled="true"><h4>{{music.title}}</h4></li>
+            </ul>
+
     </div>
   </div>
 

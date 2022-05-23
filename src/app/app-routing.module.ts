@@ -6,10 +6,12 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { MembershipComponent } from './membership/membership.component';
+import { MusicComponent } from './music/music.component';
 
 const routes: Routes = [
   { path:'membership',component:MembershipComponent},
   { path: 'heroes', component: HeroesComponent },
+  { path: 'album/:id/:slug', component: MusicComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'album/:id', component: AlbumDetailComponent },

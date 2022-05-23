@@ -11,13 +11,13 @@
 
       </div> -->
 
-      <div class="col-sm-6 col-md-6 col-lg-4 my-3 "  *ngFor="let album of albums">
+      <div class="col-sm-6 col-md-6 col-lg-3 my-3 view overlay zoom"  *ngFor="let album of albums">
         <div class="card mx-5" style="width: 18rem;">
           <img [src]="album.get_image" class="card-img-top img-thumbnail" alt="Sunset Over the Sea"/>
           <div class="card-body">
             <h5 class="card-title">{{ album.title|uppercase}}</h5>
             <p class="card-text">   {{ album.title|uppercase}}</p>
-            <a routerLink="/album/{{album.id}}" class="btn mybtn">View</a>
+            <a [routerLink]="['/album', album.id]"  class="btn mybtn">View</a>
           </div>
         </div>
         </div>

@@ -19,6 +19,7 @@ import { MatDividerModule} from '@angular/material/divider';
 import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { AlbumComponent } from './album/album.component';
 import { MembershipComponent } from './membership/membership.component';
+import { MusicComponent } from './music/music.component';
  // <-- NgModel lives here
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MembershipComponent } from './membership/membership.component';
     FooterComponent,
     AlbumDetailComponent,
     AlbumComponent,
-    MembershipComponent
+    MembershipComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,
