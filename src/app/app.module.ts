@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -20,6 +20,14 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { AlbumComponent } from './album/album.component';
 import { MembershipComponent } from './membership/membership.component';
 import { MusicComponent } from './music/music.component';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatInputModule} from '@angular/material/input';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { LoginsComponent } from './logins/logins.component';
+
+
  // <-- NgModel lives here
 @NgModule({
   declarations: [
@@ -33,7 +41,11 @@ import { MusicComponent } from './music/music.component';
     AlbumDetailComponent,
     AlbumComponent,
     MembershipComponent,
-    MusicComponent
+    MusicComponent,
+
+    LoginsComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -46,8 +58,18 @@ import { MusicComponent } from './music/music.component';
     MatIconModule,
     MatDividerModule,
     HttpClientModule,
+    MatCardModule,
+    MatTabsModule,
+    MatInputModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

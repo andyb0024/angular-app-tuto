@@ -1,0 +1,45 @@
+.example-card {
+  max-width: 500px;
+
+
+}
+
+
+.center-content{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  margin-top: 10px;
+  width: 100%;
+
+}
+mat-tab {
+ border:solid 1 coral;
+ background-color: red;
+}
+.example-button-row {
+  display: table-cell;
+  width: 490px;
+}
+.mat-button{
+  width: 100%;
+  background-color: #2C8389 !important;
+  height: 40px;
+  margin-top: 10px;
+  font-size: large;
+}
+
+mat-tab{
+  color: black
+
+}

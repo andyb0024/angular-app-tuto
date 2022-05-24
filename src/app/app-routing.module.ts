@@ -8,6 +8,8 @@ import { AlbumDetailComponent } from './album-detail/album-detail.component';
 import { MembershipComponent } from './membership/membership.component';
 import { MusicComponent } from './music/music.component';
 
+import { LoginsComponent } from './logins/logins.component';
+
 const routes: Routes = [
   { path:'membership',component:MembershipComponent},
   { path: 'heroes', component: HeroesComponent },
@@ -16,7 +18,8 @@ const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'album/:id', component: AlbumDetailComponent },
   { path: 'album', component: AlbumComponent},
-  { path: '', redirectTo: '/album', pathMatch: 'full' },
+  {path:'login',component:LoginsComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 

@@ -51,12 +51,12 @@
   </mat-sidenav >
 
   <mat-sidenav-content [ngClass]="collapsed? 'content-collapsed':''" >
-      <div class="content mat-elevation-z3">
+      <div class="content mat-elevation-z0">
+
         <router-outlet>
           <app-navbar   [sidenavData]="sidenav" ></app-navbar>
 
         </router-outlet>
-
        </div>
   </mat-sidenav-content>
 

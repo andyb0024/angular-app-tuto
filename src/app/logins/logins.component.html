@@ -1,0 +1,45 @@
+<div class="center-content my-5">
+  <mat-card class="example-card">
+
+    <mat-card-header>
+
+    </mat-card-header>
+    <mat-card-content>
+      <mat-tab-group >
+        <mat-tab label="Login" >
+          <form class="example-form my-3" [formGroup]="form" (submit)="submit()">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Username</mat-label>
+              <input formControlName="username" matInput placeholder="Username" value="" />
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input formControlName="password" type="password" matInput placeholder="Username" value="" />
+            </mat-form-field>
+            <div class="example-button-row">
+              <button class="mat-button" mat-raised-button color="primary" type="submit">Login</button>
+            </div>
+          </form>
+
+        </mat-tab>
+        <mat-tab label="register">
+          <form class="example-form my-3">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Username" value="" />
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput placeholder="Username" value="" />
+            </mat-form-field>
+            <div class="example-button-row">
+              <button class="mat-button" mat-raised-button color="primary">Register</button>
+            </div>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>

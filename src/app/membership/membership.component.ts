@@ -20,7 +20,7 @@ color!:"Medium";
     this.service.getMembership()
     .subscribe((response:any) => {
       this.membership = response;
-    
+
     });
 
   }
@@ -29,7 +29,7 @@ getColor(){
   this.service.getMembership()
   .subscribe((response:any) => {
     this.membership = response;
-    
+
     if(this.membership[1].membership_type===this.color){
       console.log("1")
     }

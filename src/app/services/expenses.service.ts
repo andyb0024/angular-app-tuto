@@ -36,6 +36,7 @@ export class ExpensesService {
 
   getMembership(){
     const url=this.baseUrl + 'membership';
+    // console.log("url...."+url)
     return this.httpClient.get(url);
   }
 
@@ -45,4 +46,9 @@ export class ExpensesService {
     return this.httpClient.get(url);
   }
 
+
+  login(){
+    const url=this.baseUrl+'auth/login';
+    return this.httpClient.get(url)
+  }
 }
