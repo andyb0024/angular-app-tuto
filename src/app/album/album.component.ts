@@ -9,6 +9,7 @@ import { ExpensesService } from '../services/expenses.service';
 })
 export class AlbumComponent implements OnInit {
 albums:Album[]=[];
+message=''
 
   constructor(private service:ExpensesService) { }
 
@@ -20,7 +21,7 @@ albums:Album[]=[];
     this.service.getExpenses()
     .subscribe((response:any)=>{
     this.albums=response
-      console.log(" posting ",response)
+      console.log(" posting ",this.albums)
     })
   }
 
