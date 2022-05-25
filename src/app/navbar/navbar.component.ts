@@ -1,3 +1,4 @@
+import { AuthService } from './../auth.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 

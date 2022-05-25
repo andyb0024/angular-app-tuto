@@ -7,7 +7,7 @@
     <mat-card-content>
       <mat-tab-group >
         <mat-tab label="Login" >
-          <form class="example-form my-3" [formGroup]="form" (submit)="submit()">
+          <form class="example-form my-3" [formGroup]="form" (submit)="submitForm()">
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>Username</mat-label>
               <input formControlName="username" matInput placeholder="Username" value="" />

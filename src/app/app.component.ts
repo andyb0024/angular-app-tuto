@@ -5,6 +5,7 @@ import {
 } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { ExpensesService } from './services/expenses.service';
+import { AuthService } from './auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

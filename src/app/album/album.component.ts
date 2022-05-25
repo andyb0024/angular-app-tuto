@@ -1,6 +1,7 @@
 import { Album } from './../album';
 import { Component, OnInit } from '@angular/core';
 import { ExpensesService } from '../services/expenses.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-album',
@@ -11,7 +12,7 @@ export class AlbumComponent implements OnInit {
 albums:Album[]=[];
 message=''
 
-  constructor(private service:ExpensesService) { }
+  constructor(private service:ExpensesService,public authservice:AuthService) { }
 
   ngOnInit(): void {
     this.getAlbums();
